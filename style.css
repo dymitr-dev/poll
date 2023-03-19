@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #272B36;
+    background-image: url('https://images.unsplash.com/photo-1517309230475-6736d926b979?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#poll-container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#poll-container h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#poll-results {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#poll-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#poll-form #poll-options {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#poll-form label {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#poll-form .radio input[type="radio"]+label {
+    color: #34568B;
+    position: relative;
+}
+
+#poll-form .radio input[type="radio"]+label::before {
+    /* Outer Circle of radio button */
+    border: 1px solid #34568B;
+    content: ' ';
+    display: inline-block;
+    margin-right: 5px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    transition: border 0.15s ease-in-out;
+}
+
+#poll-form .radio input[type="radio"]+label::after {
+    /* Inner Circle of radio button */
+    border: 0px solid #f72585;
+    content: ' ';
+    background: transparent;
+    display: inline-block;
+    margin-right: 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    transition: border 0.15s ease-in-out;
+}
+
+#poll-form input[type="radio"] {
+    display: none;
+}
+
+/* When button is active */
+#poll-form .radio input[type="radio"]:checked+label::after {
+    background: #f72585;
+}
+
+#poll-form .radio input[type="radio"]:checked+label::before {
+    border-color: #f72585;
+}
+
+#poll-form .radio input[type="radio"]:checked+label {
+    color: #f72585;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
