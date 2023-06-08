@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>China Leader and Putin Meeting Poll</title>
+    <title>Poll</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="poll-container">
-        <h2>Will the leader of China come to Putin?</h2>
+        <h2>Is the universe finite or infinite?</h2>
 
         <?php require 'result.php' ?>
 
@@ -30,7 +30,7 @@
     <footer>
         <div class="container">
             <a href="#" id="btc-link"><img src="https://img.icons8.com/color/24/000000/bitcoin.png" alt="Bitcoin (BTC) donation"></a>
-            <a href="#" id="eth-link"><img src="https://img.icons8.com/color/24/000000/ethereum.png" alt="Ethereum (ETH) donation"></a>
+            <a href="#" id="eth-bnb-link"><img src="https://img.icons8.com/color/24/000000/ethereum.png" alt="Ethereum/Binance (ETH/BNB) donation"></a>
             <a href="mailto:contact@dymitr.dev"><img src="https://img.icons8.com/color/24/null/sent--v2.png" alt="Donate via email"></a>
         </div>
     </footer>
@@ -62,11 +62,11 @@
 
         // get the BTC and ETH link elements
         const btcLink = document.getElementById('btc-link');
-        const ethLink = document.getElementById('eth-link');
+        const ethLink = document.getElementById('eth-bnb-link');
 
         // define the BTC and ETH addresses
         const btcAddress = 'bc1qkun7mqcu2d8ut3ghyprqjug4jvmf2kg56e850v';
-        const ethAddress = '0xf02F3Fe762A0f7709EFEbf430bC9Ccdd7335Edc1';
+        const ethAddress = '0x43571F08F2095311C42BfE8e79aCB581A4fB3e3C';
 
         // add click event listeners to the BTC and ETH links
         btcLink.addEventListener('click', () => {
